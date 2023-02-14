@@ -12,17 +12,20 @@
 
 
 
-function Afunction(&$wiz)
-{
-    $wiz =10;
-}
+// function Afunction(&$wiz)
+// {
+//     $wiz =10;
+// }
 
-$outsideVar = 5;
-print("Before".$outsideVar);
+// $outsideVar = 5;
+// print("Before".$outsideVar);
 
-Afunction($outsideVar);
-print("<br/>");
-print("After".$outsideVar);
+// Afunction($outsideVar);
+// print("<br/>");
+// print("After".$outsideVar);
+
+// **********************
+
 
 
 
