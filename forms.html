@@ -7,16 +7,40 @@
             <h3> Share Your Details to get callback</h3>
             
             <form method="post" action="contact.php">
-                <label> Name:
-                    <input type="text" name="txt1" >
+                <label> Name <span style="color: red;"><sup>*</sup></span>:
+                    <input type="text" name="txt1" size="20" placeholder="What's your name?" pattern="[a-zA-Z0-9 ]{1,15}"  maxlength="15" required>
                 </label>
                 <br/><br/>
-                <label> Email:
-                <input type="email" name="txt2" >
+
+                <label> Gender <span style="color: red;"><sup>*</sup></span>:
+                <input type="radio" name="gender" value="Male" >MALE
+                <input type="radio" name="gender" value="female" >FEMALE
+                    
+                <br/><br/>
+                <label> Email <span style="color: red;"><sup>*</sup></span>:
+                <input type="email" name="txt2" size="20" placeholder="What is your Email Id?" required>
                 </label>
                 <br/><br/>
-                <label> Contact:
-                <input type="tel" name="txt3" >
+                <label> Contact <span style="color: red;"><sup>*</sup></span>:
+                <input type="tel" name="txt3" pattern="[0-9]{10}" placeholder="What's your Contact Number?"  maxlength="10" required>
+                </label>
+                <br/><br/>
+                Software you are worked on?
+                <label><input type="checkbox" name="blender" value="Blender">Blender</label>
+                <label><input type="checkbox" name="adobephotoshop" value="Adobe Photoshop">Adobe Photoshop</label>
+                <br/><br/>
+                
+                <label> Select Course<span style="color: red;"><sup>*</sup></span>:
+                    <select name=""  size="1">
+                        <option value="" > Select Course </option>
+                        <option value="BVOC"> Choose BVOC </option>
+                        <option value="DAVFX"> Choose DAVFX </option>
+                    </select>
+                </label>
+
+                <br/><br/>
+                <label>Message:
+                    <textarea name="txtarea1" rows="3" placeholder="You can share if you have any query." cols="30">  </textarea>
                 </label>
                 <br/><br/>
                 <input type="submit" value="Submit Your Details" >
