@@ -9,7 +9,7 @@
 <?php
 $a=5;
 function test(){
-    echo 
+    echo "";
 }
 
 ?>
