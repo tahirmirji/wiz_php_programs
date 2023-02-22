@@ -3,13 +3,13 @@
 if(isset($_POST['Submit']))
 {
 
-    if(  isset(  $_POST['txt1']   )    &&      isset(    $_POST['txt2']   )   )
+    if(  isset(  $_POST['txt1']   )    &&      isset(    $_POST['txt2']   )  && isset($_POST['txt3'])   )
     {
 
         $empname = $_POST['txt1'];
         $empemail   = $_POST['txt2'];
+        $empcontact   = $_POST['txt3'];
         
-    
 $host ='localhost';
 $username ='root';
 $pass ='';
@@ -20,7 +20,7 @@ $connection = mysqli_connect($host,$username,$pass,$dbname);
 if($connection != null)
 {
     echo 'Connection Success........<br>';
-    $query = " INSERT INTO employee values(NULL,'".$empname."' , '".$empemail."')";
+    $query = " INSERT INTO employee values(NULL,'".$empname."' , '".$empemail."','".$empcontact."')";
     $reply = mysqli_query($connection,$query);
 
     if($reply>0)
